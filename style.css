@@ -1,0 +1,510 @@
+/*
+Theme Name: That Power Platform Chap
+Text Domain: That Power Platform Chap
+Version:1.6
+Description: Theme for my site
+Tags: 
+Introducing the Power Platform Prodigy theme for WordPress! It's your vibrant hub for all things Power Platform, designed to effortlessly showcase your work and insights within the community. With its sleek, responsive design, visitors can explore your content on any device with ease. Whether you're sharing tutorials, success stories, or sparking discussions, this theme is your perfect companion for standing out and fostering engagement. It's not just a theme; it's your digital playground for making a big impact in the Power Platform world!
+Author: Benjamin Crowe
+Aurthor URI : https://benjamincrowe.co.uk
+*/
+
+
+:root {
+    --header-bg:#254550;
+    --header-text:#FFFFFA;
+    --light-header-bg:#FFFFFA;
+    --light-headertext:#254550;
+    --h2-header:#D33F49;
+    --h3-header:#DB9D47;
+    --p-text:#42474d;
+    --font-small: 0.8125rem;
+    --font-normal: 1em;
+	--breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px; 
+	--sidebar-width: 280px;
+}
+
+a{
+    color:#FFFFFA;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+    color:#FFFFFA;
+}
+
+body{
+    --color-background:var(--light-header-bg);
+    padding: 0px 0px 0px 0px;
+    margin:0px 0px 0px 0px;
+}
+
+.banner-img {
+    width:100vw;
+    height:auto;
+}
+.mobile-logo{
+    display:none;
+}
+.return h3{
+	color:var(--h2-header);
+}
+.return h3::after{
+	color:var(--h2-header);
+}
+@media only screen and (max-width: 1000px) and (min-width: 426px){
+    .logo{
+        display: none;
+    }
+    .mobile-logo{
+        display:block;
+		margin:0 0 1rem 0;
+    }
+}
+@media only screen and (max-width: 425px){
+    .logo{
+        display: none;
+    }
+    .mobile-logo{
+        display:block;
+		padding:0 0 1rem 0;
+    }
+}
+
+.social-row{
+    padding-left:1rem;
+}
+.social{
+    width:20px;
+    height:20px;
+    color: #FFFFFA;
+}
+.social-container{
+    padding:0rem 1rem 0 0;
+    height:20px;
+}
+.hero-banner{
+    width:100vw;
+    height:auto;
+    padding-bottom:2rem;
+    padding-top:5rem;
+    background:var(--header-bg);
+    color:var(--header-text);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cat-container{
+    border-width: 2px;
+    border-color: var(--header-bg);
+    border-radius: 5px;
+}
+.cat-container h3{
+    color:var(--h2-header);
+	width:var(--sidebar-width);
+}
+.cat-container p{
+    color:var(--p-text);
+}
+.sitetitle{
+    font-size: 5rem;
+}
+
+@media(max-width: 425px){
+    .sitetitle{
+        font-size: 3rem;
+    }
+    .sitesubtitle{
+        font-size:1.5rem;
+    }
+}
+
+.sitesubtitle{
+    text-decoration: overline;
+}
+
+.post-container{
+    padding:2rem;
+    height:auto;
+    width: 100vw;
+}
+
+.post-container p{
+    color:var(--p-text);
+}
+
+.post-container h1{
+    color:var(--light-headertext);
+}
+.post-container a{
+    color:var(--h2-header);
+}
+.post-container a:visited{
+    color:var(--light-headertext);
+}
+.content_title{
+    padding:0px;
+    margin:0px;
+}
+
+.meta span {
+    display: inline-block;
+    margin-right:.25em;
+}
+
+.meta span.tag {
+    padding:0.2rem;
+    border-radius:5px;
+}
+
+.fa-tag{
+	padding:0rem 0.2rem 0rem 0.2rem;
+}
+
+.content_thumb{
+    width:auto;
+    justify-content: center;
+    padding:0 0 1vh 0;
+}
+
+.content {
+    width:auto;
+    justify-content: center;
+    padding:0 0 2vh 0;
+}
+
+/* -------------------------------------------------------------------------- */
+/*	12. Comments
+/* -------------------------------------------------------------------------- */
+
+
+/* Comment Headers ----------------------------- */
+
+.comments-wrapper {
+	margin-top: 3rem;
+}
+
+.comment-reply-title {
+	margin: 0 0 4rem 0;
+	text-align: center;
+}
+
+
+/* Comment Item ----------------------------- */
+
+/* COMMENT HEADER */
+
+.comments .comment,
+.comments .pingback,
+.comments .trackback,
+.comments .review {
+	padding-top: 3.5rem;
+}
+
+div.comment:first-of-type {
+	margin-top: 3.5rem;
+	padding-top: 0;
+}
+
+.comments .comments-header + div {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+.comment-body {
+	position: relative;
+}
+
+.comment .comment {
+	padding-left: 5%;
+}
+
+.comment-meta {
+	line-height: 1.1;
+	margin-bottom: 0;
+	min-height: 5rem;
+	padding-left: 5rem;
+	position: relative;
+}
+
+.hide-avatars .comment-meta {
+	min-height: 0;
+	padding-left: 0;
+}
+
+.comment-meta a {
+	color: inherit;
+}
+
+.comment-author {
+	font-size: 1.5rem;
+	font-weight: 600;
+	letter-spacing: -0.027777778em;
+}
+
+.comment-author a {
+	text-decoration: underline;
+}
+
+.comment-author a:hover,
+.comment-author a:focus {
+	text-decoration: none;
+}
+
+.comment-meta .avatar {
+	height: 4rem;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 4rem;
+}
+
+.comment-author .url {
+	text-decoration: underline;
+}
+
+.comment-metadata {
+	color: var(--p-text);
+	font-size: var(--font-small);
+	font-weight: 500;
+	margin-top: 0.2rem;
+}
+
+.comment-metadata a {
+	text-decoration: none;
+}
+
+.comment-metadata a:focus,
+.comment-metadata a:hover {
+	text-decoration: underline;
+}
+
+
+/* COMMENT CONTENT */
+
+.comment-content.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+    width: 100%;
+    background-color:var(--p-text);
+    padding:.5em;
+}
+
+.comment-content.entry-content .alignleft {
+
+	/*rtl:ignore*/
+	margin-left: 0;
+}
+
+.comment-content.entry-content .alignright {
+
+	/*rtl:ignore*/
+	margin-right: 0;
+}
+
+/* COMMENT FOOTER */
+
+.comment-footer-meta {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	font-size: var(--font-small);
+	font-weight: 600;
+	justify-content: flex-start;
+	letter-spacing: 0.030833333em;
+	line-height: 1;
+	margin: 1.5rem 0 -1rem -1.5rem;
+	text-transform: uppercase;
+}
+
+.comment-footer-meta > * {
+	margin: 0 0 1rem 1.5rem;
+}
+
+.comment-reply-link {
+    background-color: var(--h2-header);
+    border-radius:2px;
+	color: #fff;
+	display:flexbox;
+    border-radius: 5px;
+	padding: 0.7rem;
+}
+
+.comment-reply-link p{
+	color: #fff;
+}
+
+.bypostauthor .comment-footer-meta .by-post-author {
+	display: block;
+}
+
+.comment-footer-meta a {
+	text-decoration: none;
+}
+
+.comment-footer-meta a:focus,
+.comment-footer-meta a:hover {
+	text-decoration: underline;
+}
+
+
+/* Pingbacks & Trackbacks ------------------------- */
+
+.pingback .comment-meta,
+.trackback .comment-meta {
+	padding-left: 0;
+}
+
+
+/* Comments Pagination ---------------------------- */
+
+.comments-pagination {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 6rem;
+	text-align: center;
+}
+
+.comments-pagination.only-next {
+	justify-content: flex-end;
+}
+
+.comments-pagination .page-numbers {
+	display: none;
+	text-decoration: none;
+}
+
+.comments-pagination .page-numbers:focus,
+.comments-pagination .page-numbers:hover {
+	text-decoration: underline;
+}
+
+.comments-pagination .prev,
+.comments-pagination .next {
+	display: block;
+}
+
+.comments-pagination .prev {
+	left: 0;
+}
+
+.comments-pagination .next {
+	right: 0;
+	text-align: right;
+}
+
+
+/* Comment Respond ---------------------------- */
+
+.comment-respond::after {
+	clear: both;
+	content: "";
+	display: block;
+}
+
+.comment-respond .comment-notes,
+.comment-respond .logged-in-as {
+	color: #6d6d6d;
+	font-size: 1.6rem;
+	line-height: 1.4;
+	margin: -3rem 0 4rem 0;
+	text-align: center;
+}
+
+.comment-respond .comment-notes a,
+.comment-respond .logged-in-as a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.comment-respond .comment-notes a:focus,
+.comment-respond .comment-notes a:hover,
+.comment-respond .logged-in-as a:focus,
+.comment-respond .logged-in-as a:hover {
+	text-decoration: underline;
+}
+
+.comment-respond p {
+	line-height: 1.1;
+	margin-bottom: 2rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.comment-respond p:not(.comment-notes) {
+	max-width: 58rem;
+}
+
+.comment-form-cookies-consent {
+	align-items: baseline;
+	display: flex;
+}
+
+.comment-respond > p:last-of-type {
+	margin-bottom: 0;
+}
+
+.comment-respond label {
+	display: block;
+}
+
+.comment-respond input[type="checkbox"] + label {
+	font-size: 1.5rem;
+	line-height: 1.25;
+}
+
+.comment-respond input[type="text"],
+.comment-respond input[type="email"],
+.comment-respond textarea {
+	margin-bottom: 0;
+}
+
+.comment-respond textarea {
+	height: 15rem;
+}
+
+.comment-respond #submit {
+	display: block;
+}
+
+.comment-respond .comments-closed {
+	text-align: center;
+}
+
+
+/* Reply Respond ---------------------------- */
+
+.comments .comment-respond {
+	padding: 3rem 0 0;
+}
+
+.comments .comment-respond .comment-reply-title,
+.comments .comment-respond .comment-notes,
+.comments .comment-respond .logged-in-as {
+	text-align: left;
+}
+
+.comment-reply-title small {
+	display: block;
+	font-size: 1.6rem;
+	font-weight: 600;
+	letter-spacing: -0.0277em;
+	margin: 0.5rem 0 0 0;
+	white-space: nowrap;
+}
+
+.comment-reply-title small a {
+	text-decoration: none;
+}
+
+.comment-reply-title small a:focus,
+.comment-reply-title small a:hover {
+	text-decoration: underline;
+}
+
+.reply a{
+    color:#FFFFFA
+}
